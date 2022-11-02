@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.schoolsystem.ParentSendPMDashboard">
+   <children>
+      <Text layoutX="98.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parent - Send Private Message">
+         <font>
+            <Font size="30.0" />
+         </font></Text>
+      <Button fx:id="PSPMBackButton" layoutX="274.0" layoutY="321.0" mnemonicParsing="false" text="Back" />
+   </children>
+</AnchorPane>
