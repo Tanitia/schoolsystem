@@ -70,7 +70,7 @@ public class Mocker {
         student.add("Parent2");
         this.students.add(student);
         }
-         void addStudent(String studentName, String parentName){
+         void addStudents(String studentName, String parentName){
             List<String> student = new ArrayList<String>();
             int id = Integer.parseInt(this.students.get(this.students.size()-1).get(0))+1;
             student.add(String.valueOf(id));
@@ -112,5 +112,85 @@ public class Mocker {
             attendance.add(studentID);
             this.attendances.add(attendance);
         }
+        List<String> readUsers(String username) {
+        for (int i=0;i<users.size();i++){
+            if (users.get(i).get(0).equals(username)){
+                return users.get(i);
+            }
+        }
+        List<String> a = new ArrayList<String>();
+        return a;
+    }
+    List<String> readMessages(String messageID) {
+        for (int i=0;i<messages.size();i++){
+            if (messages.get(i).get(0).equals(messageID)){
+                return messages.get(i);
+            }
+        }
+        List<String> a = new ArrayList<String>();
+        return a;
+    }
+    List<String> readClasses(String classID) {
+        for (int i=0;i<classes.size();i++){
+            if (classes.get(i).get(0).equals(classID)){
+                return classes.get(i);
+            }
+        }
+        List<String> a = new ArrayList<String>();
+        return a;
+    }
+    List<String> readAttendances(String classID, String studentID) {
+        for (int i=0;i<attendances.size();i++){
+            if (attendances.get(i).get(0).equals(classID) && (attendances.get(i).get(0).equals(studentID))){
+                return attendances.get(i);
+            }
+        }
+        List<String> a = new ArrayList<String>();
+        return a;
+    }
+    List<String> readStudents(String studentID) {
+        for (int i=0;i<students.size();i++){
+            if (students.get(i).get(0).equals(studentID)){
+                return students.get(i);
+            }
+        }
+        List<String> a = new ArrayList<String>();
+        return a;
+    }
+    void deleteUsers(String username){
+        for (int i=0;i<users.size();i++){
+            if (users.get(i).get(0).equals(username)) {
+                users.remove(i);
+            }
+        }
+    }
+    void deleteMessages(String messageID){
+        for (int i=0;i<messages.size();i++){
+            if (messages.get(i).get(0).equals(messageID)){
+                messages.remove(i);
+            }
+        }
+    }
+    void deleteClasses (String classID) {
+        for (int i=0;i<classes.size();i++){
+            if (classes.get(i).get(0).equals(classID)){
+                classes.remove(i);
+            }
+    }
+    }
+    void deleteAttendances (String classID, String studentID) {
+        for (int i=0;i<attendances.size();i++){
+            if (attendances.get(i).get(0).equals(classID) && (attendances.get(i).get(0).equals(studentID))){
+                attendances.remove(i);
+            }
+    }
+    }
+    void deleteStudents (String studentID){
+        for (int i=0;i<students.size();i++) {
+            if (students.get(i).get(0).equals(studentID)) {
+                students.remove(i);
+            }
+        }
+    }
     }
 
